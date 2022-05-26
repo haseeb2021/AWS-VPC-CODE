@@ -20,3 +20,14 @@ resource "aws_subnet" "New-subnet1" {
                   "Name" = "new_subnet1"
                 }
 }
+
+## EC2 creation Linux 2
+
+resource "aws_instance" "EC2" {              
+    ami = "ami-0c1bc246476a557.."
+    instance_type =   "t2.micro"
+    subnet_id = "subnet-053613b3a73cc84.."
+    tags =     {
+      Name = "EC2_Linux2"
+}
+}
